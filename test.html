@@ -1,0 +1,32 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script>
+    const usernameLocalStorge = localStorage.getItem('username')
+      if (usernameLocalStorge){
+        window.location = '/index.html'
+      }
+    
+    function loginService(user_name,password){
+      return new Promise(async(resolve,reject) => {
+        try {
+          const response = await axios.post('http://localhost:3000/login',{user_name,password})
+          return resolve(response)
+        } catch (error){
+          return reject(error)
+        }
+      })
+    }
+    async function submitlogin(){
+      try{
+        const user_name = document.getElementById("username").value
+        const password = document.getElementById("password").value
+        const response = await loginService(user_name,password)
+        console.log(response.data.user_name)
+        alert(response.data.user_name)
+        localStorage.setItem('username',response.data.user_name)
+        window.location = '/index.html'
+      }catch(error){
+        console.log(error.response.data);
+        alert(error.response.data.message)
+      }
+    }
+  </script>

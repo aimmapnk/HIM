@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/him-logo.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <!-- Glidejs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+  
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <!-- iconfooter -->
+  <link href='https://css.gg/facebook.css' rel='stylesheet'>
+  <link href='https://css.gg/instagram.css' rel='stylesheet'>
+  <link href='https://css.gg/twitter.css' rel='stylesheet'>
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./cart.css" />
+  <title>HIM-SHOPPING</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrapper container">
+      <div class="logo"><a href="">HIM</a></div>
+      <ul class="nav-list">
+        <!-- <div class="top">
+          <label for="" class="btn close-btn"><i class="fas fa-times"></i></label>
+        </div> -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="like.html">Like</a></li>
+        <li><a href="cart2.html">Cart</a></li>
+        <li><a href="login.html">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- cart  -->
+  <div class="container-fluid mt-5">
+    <h2 class="mb-5 text-center">Shopping Cart</h2>
+    <div class="row justify-content-center">
+       <div class="col-md-8">
+          <div class="table-responsive">
+             <table id="myTable" class="table">
+                <thead>
+                   <tr>
+                      <th>Product</th>
+                      <th>Size</th>
+                      <th>Total</th>
+                      <th>Price</th>
+                      <th class="text-right">
+                         <span id="amount" class="amount">Amount</span>
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td>
+                         <div class="product-img">
+                            <div class="img-prdct">
+                               <img src="./images/p2.jpg">
+                            </div>
+                         </div>
+                      </td>
+                      <td>
+                        <button type="button">S</button><br>
+                        <button type="button">M</button><br>
+                        <button type="button">L</button><br>
+                        <button type="button">XL</button>
+                      </td>
+                      <td>
+                         <div class="button-container">
+                            <button class="cart-qty-plus" type="button" value="+">+</button>
+                            <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                            <button class="cart-qty-minus" type="button" value="-">-</button>
+                         </div>
+                      </td>
+                      <td>
+                        <input type="text" value="72" class="price form-control" disabled>
+                     </td>
+                      <td align="right">$ <span id="amount" class="amount">0</span>
+                      </td>
+                   </tr>
+                   <!---- add more tr  ---------->
+                   <tr>
+                    <td>
+                       <div class="product-img">
+                          <div class="img-prdct">
+                             <img src="./images/s4.jpg">
+                          </div>
+                       </div>
+                    </td>
+                    <td>
+                       <button type="button">S</button><br>
+                       <button type="button">M</button><br>
+                       <button type="button">L</button><br>
+                       <button type="button">XL</button>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-minus" type="button" value="-">-</button> 
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                       </div>
+                    </td>
+                    <td>
+                      <input type="text" value="72" class="price form-control" disabled>
+                   </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+                   <!---- add more tr  ---------->
+                   <tr>
+                    <td>
+                       <div class="product-img">
+                          <div class="img-prdct">
+                             <img src="./images/a7.jpg">
+                          </div>
+                       </div>
+                    </td>
+                    <td>
+                       <button type="button">S</button><br>
+                       <button type="button">M</button><br>
+                       <button type="button">L</button><br>
+                       <button type="button">XL</button>
+                    </td>
+                    <td>
+                       <div class="button-container">
+                          <button class="cart-qty-minus" type="button" value="-">-</button> 
+                          <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                          <button class="cart-qty-plus" type="button" value="+">+</button>
+                       </div>
+                    </td>
+                    <td>
+                      <input type="text" value="72" class="price form-control" disabled>
+                   </td>
+                    <td align="right">$ <span id="amount" class="amount">0</span>
+                    </td>
+                 </tr>
+                 
+                </tbody>
+                <tfoot>
+                   <tr>
+                      <td colspan="4"></td>
+                      <td align="right">
+                         <strong>TOTAL = $  <span id="total" class="total">0</span>
+                         </strong> <br>
+                         <button type="button">Buy</button>
+                      </td>
+                   </tr>
+                </tfoot>
+             </table>
+          </div>
+       </div>
+    </div>
+ </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h3>Company information</h3>
+          <a href="">About HIM</a>
+          <a href="">Contect HIM</a>
+        </div>
+        <div class="footer-center">
+          <h3>Help & Support</h3>
+          <a href="">How to Order</a>
+          <a href="">How to buy</a>
+          <a href="">How to return</a>
+        </div>
+        <div class="footer-center">
+          <div class="contact">
+            <h3>More contact with me</h3>
+           <li><a href=""><i class="gg-facebook"></i></a></li><br>
+           <li><a href=""><i class="gg-instagram"></i></a></li><br>
+           <li><a href=""><i class="gg-twitter"></i></a></li>
+          </div>
+        </div>
+        <p>2000-2021 HIM All Rights Reserved </p>
+      </div>
+    </div>
+  </footer>
+
+<script src="./js/cart.js"></script>
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script  src="./script.js"></script>
+</body>
